@@ -21,9 +21,7 @@
     <url>http://www.qos.ch</url>
   </organization>
   <inceptionYear>2005</inceptionYear>
-<properties>
-  <sonar.organization>ma1ina</sonar.organization>
-</properties>
+
   <licenses>
     <license>
       <!-- https://spdx.org/licenses/EPL-2.0.html -->
@@ -117,7 +115,7 @@
     <jetty.version>12.0.13</jetty.version>
 
     <central-publishing-maven-plugin.version>0.9.0</central-publishing-maven-plugin.version>
-
+    <sonar.organization>ma1ina</sonar.organization>
   </properties>
 
   <developers>
