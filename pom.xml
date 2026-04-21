@@ -21,7 +21,9 @@
     <url>http://www.qos.ch</url>
   </organization>
   <inceptionYear>2005</inceptionYear>
-
+<properties>
+  <sonar.organization>ma1ina</sonar.organization>
+</properties>
   <licenses>
     <license>
       <!-- https://spdx.org/licenses/EPL-2.0.html -->
