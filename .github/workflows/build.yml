@@ -38,8 +38,7 @@ jobs:
           mvn -B clean jacoco:prepare-agent verify jacoco:report 
           org.sonarsource.scanner.maven:sonar-maven-plugin:sonar 
           -Dsonar.projectKey=ma1ina_logback-test-sonar 
-          -Dsonar.organization=ma1ina
-          -Dsonar.host.url=https://sonarcloud.io
-          -Dsonar.java.binaries=**/target/classes
-          '-Dsonar.coverage.jacoco.xmlReportPaths=**/target/site/jacoco/jacoco.xml'
+          -Dsonar.organization=ma1ina 
+          -Dsonar.host.url=https://sonarcloud.io 
+          '-Dsonar.coverage.jacoco.xmlReportPaths=**/target/site/jacoco/jacoco.xml' 
           -Dmaven.test.failure.ignore=true
