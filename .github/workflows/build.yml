@@ -34,6 +34,8 @@ jobs:
       - name: Build and analyze
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-          # If using SonarCloud, you might also need:
-          # SONAR_HOST_URL: https://sonarcloud.io
-        run: mvn -B compile org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=ma1ina_logback-test-sonar
+        run: >
+          mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar 
+          -Dsonar.projectKey=ma1ina_logback-test-sonar 
+          -Dsonar.coverage.jacoco.xmlReportPaths=**/target/site/jacoco/jacoco.xml
+          -Dmaven.test.failure.ignore=true
