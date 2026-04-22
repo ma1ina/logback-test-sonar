@@ -35,7 +35,8 @@ jobs:
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: >
-          mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar 
+          mvn -B clean jacoco:prepare-agent verify jacoco:report sonar:sonar 
           -Dsonar.projectKey=ma1ina_logback-test-sonar 
-          -Dsonar.coverage.jacoco.xmlReportPaths=**/target/site/jacoco/jacoco.xml
+          -Dsonar.java.binaries=**/target/classes
+          '-Dsonar.coverage.jacoco.xmlReportPaths=**/target/site/jacoco/jacoco.xml'
           -Dmaven.test.failure.ignore=true
