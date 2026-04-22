@@ -36,4 +36,4 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           # If using SonarCloud, you might also need:
           # SONAR_HOST_URL: https://sonarcloud.io
-        run: mvn -B compile org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=ma1ina_logback-test-sonar -DskipTests
+        run: mvn -B compile org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=ma1ina_logback-test-sonar
